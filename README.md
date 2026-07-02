@@ -29,7 +29,7 @@ i trebaju se instalirati dependencies:
 
 python -m pip install -r requirements.txt
 
-Tek nakon toga šokrenuti:
+Tek nakon toga pokrenuti:
 1. clean_data.py
 2. feature_engineering.py
 3. train_and_evaluate.py
