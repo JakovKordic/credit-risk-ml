@@ -16,23 +16,38 @@ application_train.SK_ID_CURR = bureau.SK_ID_CURR
 4. Tablica installments_payments.csv sadrži povijest otplate rata za prethodne kredite koje su klijenti imali kod Home Credita. Svaki redak u ovoj tablici predstavlja jednu planiranu ili stvarnu otplatu rate. Ova tablica bilježi detalje o tome kako su klijenti plaćali svoje rate, uključujući iznose i datume. Jedan klijent može imati više prethodnih aplikacija. Veza s glavnom tablicom: application_train.SK_ID_CURR = previous_application.SK_ID_CURR
 
 # Upute za pokretanje
-Prije pokretanja ikakvog koda u data/raw folderu moraju biti (priložio bi ih u repozitorij, no github ih ne dozvoljava):
-application_train.csv,
-bureau.csv,
-previous_application.csv
-installments_payments.csv
 
-koji se nalaze na:
-https://www.kaggle.com/competitions/home-credit-default-risk/data
+Prije pokretanja koda, potrebno je klonirati repozitorij, pripremiti podatke i instalirati potrebne pakete.
 
-i trebaju se instalirati dependencies:
+### 1. Kloniranje repozitorija
+Otvorite terminal i pokrenite sljedeće naredbe:
+```bash
+git clone https://github.com
+cd credit-risk-ml
+```
 
+### 2. Priprema podataka
+Zbog ograničenja veličine datoteka na GitHubu, baze podataka nisu uključene u repozitorij. 
+1. Preuzmite podatke s Kaggle natjecanja: [Home Credit Default Risk Data](https://kaggle.com)
+2. Unutar korijenskog direktorija projekta stvorite mapu `data/raw/` ako već ne postoji.
+3. Smjestite sljedeće `.csv` datoteke u `data/raw/` mapu:
+   - `application_train.csv`
+   - `bureau.csv`
+   - `previous_application.csv`
+   - `installments_payments.csv`
+
+### 3. Instalacija paketa
+Instalirajte sve potrebne biblioteke pokretanjem:
+```bash
 python -m pip install -r requirements.txt
+```
 
-Tek nakon toga pokrenuti:
-1. clean_data.py
-2. feature_engineering.py
-3. train_and_evaluate.py
+### 4. Pokretanje ML pipelinea
+Nakon što su podaci i paketi spremni, pokrenite skripte točno ovim redoslijedom:
+1. `python clean_data.py` (čišćenje i priprema sirovih podataka)
+2. `python feature_engineering.py` (generiranje novih značajki i agregacija)
+3. `python train_and_evaluate.py` (treniranje modela, testiranje i ispis metrika)
+
 
 ## Rezultati evaluacije:
 
