@@ -15,8 +15,8 @@ application_train.SK_ID_CURR = bureau.SK_ID_CURR
 3. Tablica previous_application.csv sadrži podatke o prethodnim kreditnim aplikacijama koje su klijenti Home Credita podnijeli izravno u Home Creditu. Svaki redak u ovoj tablici odgovara jednoj prethodnoj aplikaciji. Jedan klijent može imati više prethodnih aplikacija. Veza s glavnom tablicom: application_train.SK_ID_CURR = previous_application.SK_ID_CURR
 4. Tablica installments_payments.csv sadrži povijest otplate rata za prethodne kredite koje su klijenti imali kod Home Credita. Svaki redak u ovoj tablici predstavlja jednu planiranu ili stvarnu otplatu rate. Ova tablica bilježi detalje o tome kako su klijenti plaćali svoje rate, uključujući iznose i datume. Jedan klijent može imati više prethodnih aplikacija. Veza s glavnom tablicom: application_train.SK_ID_CURR = previous_application.SK_ID_CURR
 
-
-Prije pokretanja ikakvog koda u data/raw folderu moraju biti:
+# Upute za pokretanje
+Prije pokretanja ikakvog koda u data/raw folderu moraju biti (priložio bi ih u repozitorij, no github ih ne dozvoljava):
 application_train.csv,
 bureau.csv,
 previous_application.csv
