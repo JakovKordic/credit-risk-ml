@@ -18,6 +18,8 @@ import time
 from imblearn.over_sampling import SMOTE
 import pandas as pd
 
+import joblib
+
 file_path = 'data\processed\df_application_train_final.csv'
 df = pd.read_csv(file_path)
 
@@ -429,8 +431,7 @@ shap_importance = shap_importance.sort_values(by='mean_abs_shap_value', ascendin
 print("\nTop 10 Most Important Features based on SHAP (with direction):")
 print(shap_importance.head(10))
 
-
-choice = input("Želite li spremiti naybolji model (XGBoost - class weight) - y/n: ")
+choice = input("Želite li spremiti naybolji model (XGBoost - class weight) - y/n")
 if choice == 'y':
     drive_path = 'model/'
     model_filename = 'xgboost_best_model.joblib'
