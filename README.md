@@ -1,5 +1,5 @@
 # Credit Risk Scoring pomoću ML modela
-Cilj: Razviti ML pipeline koji na tenelju podataka o klijentuna predviđa rizik neurednog otplaćivanja kredita
+Cilj: Razviti ML pipeline koji na temelju podataka o klijentuna predviđa rizik neurednog otplaćivanja kredita
 
 # Objašnjenja tablica i ključeva za spajanje
 1. Tablica application_train.csv predstavlja glavnu tablicu podataka o trenutnim kreditnim aplikacijama klijenata. Svaki redak u ovoj tablici odgovara jednoj kreditnoj prijavi, a stupci opisuju različite karakteristike podnositelja zahtjeva i same aplikacije. Najvažniji stupci su: 
