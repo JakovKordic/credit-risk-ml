@@ -3,7 +3,7 @@ Cilj: Razviti ML pipeline koji na tenelju podataka o klijentuna predviđa rizik 
 
 # Objašnjenja tablica i ključeva za spajanje
 1. Tablica application_train.csv predstavlja glavnu tablicu podataka o trenutnim kreditnim aplikacijama klijenata. Svaki redak u ovoj tablici odgovara jednoj kreditnoj prijavi, a stupci opisuju različite karakteristike podnositelja zahtjeva i same aplikacije. Najvažniji stupci su: 
-*	SK_ID_CURR — ID trenutnog klijenta/aplikacije
+* 	SK_ID_CURR — ID trenutnog klijenta/aplikacije
 *	TARGET — ciljna varijabla (1 - poteškoće, 0 - bez poteškoća)
 *	AMT_INCOME_TOTAL — prihod klijenta
 *	AMT_CREDIT — iznos kredita
